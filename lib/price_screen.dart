@@ -72,9 +72,20 @@ class _PriceScreenState extends State<PriceScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return MaterialApp(
+
+          home: Container(
+          decoration: BoxDecoration(
+          image: DecorationImage(
+          image: AssetImage('image/crypto.jpg'),
+    fit: BoxFit.cover,
+    ),
+    ),
+    child: Scaffold(
+
+    appBar: AppBar(
         title: Text('CryptoCurrency App'),
+        centerTitle: true,
       ),
       body:/* Image(
         Image:
@@ -89,13 +100,16 @@ class _PriceScreenState extends State<PriceScreen> {
             child: buildColumn(),
           ),
           Container(
-              height: 150.0,
+              height: 100.0,
+              //width: 150.0,
               alignment: Alignment.center,
               padding: EdgeInsets.only(bottom: 30.0),
               color: Colors.blue,
               child: Platform.isIOS ? iOSPicker() : androidDropDown()),
         ],
       ),
+    ),
+    ),
     );
   }
 
