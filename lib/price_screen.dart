@@ -82,6 +82,7 @@ class _PriceScreenState extends State<PriceScreen> {
     ),
     ),
     child: Scaffold(
+      backgroundColor: Colors.transparent,
 
     appBar: AppBar(
         title: Text('CryptoCurrency App'),
