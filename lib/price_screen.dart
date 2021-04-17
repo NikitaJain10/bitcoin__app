@@ -35,7 +35,7 @@ class _PriceScreenState extends State<PriceScreen> {
   DropdownButton<String> androidDropDown() {
     List<DropdownMenuItem<String>> items = [];
     for (String currency in currenciesList) {
-      items.add(DropdownMenuItem(child: Text(currency), value: currency));
+      items.add(DropdownMenuItem(child: Text(currency,style: TextStyle(color: Colors.indigo[800],fontSize:25, fontWeight: FontWeight.bold),), value: currency));
     }
     return DropdownButton<String>(
         value: selectedCurrency,
@@ -85,27 +85,40 @@ class _PriceScreenState extends State<PriceScreen> {
       backgroundColor: Colors.transparent,
 
     appBar: AppBar(
-        title: Text('CryptoCurrency App'),
+        title: Text('CryptoCurrency App',style: TextStyle(color: Colors.indigo[800],fontSize:25, fontWeight: FontWeight.bold),),
+        toolbarHeight: 70.0,
+
+
+
+
         centerTitle: true,
+      backgroundColor: Colors.yellow[500],
+
       ),
-      body:/* Image(
-        Image:
-          NetworkImage()
-      )*/
+      body:
       Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
+
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.fromLTRB(18, 30,18,30),
+            padding: EdgeInsets.fromLTRB(40,20,40,20),
+
+
             child: buildColumn(),
           ),
+          Column(
+           
+
+          ),
+
           Container(
               height: 100.0,
+
               //width: 150.0,
               alignment: Alignment.center,
               padding: EdgeInsets.only(bottom: 30.0),
-              color: Colors.blue,
+              color: Colors.yellow[600],
               child: Platform.isIOS ? iOSPicker() : androidDropDown()),
         ],
       ),

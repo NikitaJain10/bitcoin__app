@@ -14,19 +14,20 @@ class CardNew extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.blue,
-      elevation: 15.0,
+      color: Colors.transparent,
+      elevation: 20.0,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30.0),
+        borderRadius: BorderRadius.circular(40.0),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
+        padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
         child: Text(
           '1 $currency1 = $currencyRate $selectedCurrency',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20.0,
-            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            color: Colors.yellow[300],
           ),
         ),
       ),
