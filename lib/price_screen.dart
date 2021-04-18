@@ -87,11 +87,7 @@ class _PriceScreenState extends State<PriceScreen> {
     appBar: AppBar(
         title: Text('CryptoCurrency App',style: TextStyle(color: Colors.indigo[800],fontSize:25, fontWeight: FontWeight.bold),),
         toolbarHeight: 70.0,
-
-
-
-
-        centerTitle: true,
+       centerTitle: true,
       backgroundColor: Colors.yellow[500],
 
       ),
@@ -108,7 +104,7 @@ class _PriceScreenState extends State<PriceScreen> {
             child: buildColumn(),
           ),
           Column(
-           
+
 
           ),
 
@@ -118,7 +114,7 @@ class _PriceScreenState extends State<PriceScreen> {
               //width: 150.0,
               alignment: Alignment.center,
               padding: EdgeInsets.only(bottom: 30.0),
-              color: Colors.yellow[600],
+              color: Colors.yellow[500],
               child: Platform.isIOS ? iOSPicker() : androidDropDown()),
         ],
       ),
